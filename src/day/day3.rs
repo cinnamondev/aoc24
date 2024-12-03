@@ -10,7 +10,7 @@ pub fn run() {
     let re = Regex::new(r"mul\((\d+),(\d+)\)").unwrap();
 
     let matches: u32 = re.captures_iter(&string)
-    .map(|captures| {
+    .map(|captures| {        
         let l = captures.get(1).unwrap().as_str().parse::<u32>().unwrap();
         let r = captures.get(2).unwrap().as_str().parse::<u32>().unwrap();
         println!("l: {} r: {}", l,r);
@@ -23,17 +23,13 @@ pub fn run() {
 
     let mut sum = 0;
     let mut parse_muls = true;
-    for captures in re.captures_iter(&string) {
-        let instruction = captures.get(0).unwrap().as_str();
+    for captures in re.captures_iter(&string) { // iterator function w external
+        let instruction = captures.get(0).unwrap().as_str();     // deps is ugly.
         if (instruction == "do()") {
             parse_muls = true;
-            continue;
         } else if (instruction == "don't()") {
             parse_muls = false;
-            continue;
-        }
-
-        if (parse_muls) {
+        } else if (parse_muls) {
             let l = captures.get(1).unwrap().as_str().parse::<u32>().unwrap();
             let r = captures.get(2).unwrap().as_str().parse::<u32>().unwrap();
             println!("l: {} r: {}", l,r);
