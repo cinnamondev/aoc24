@@ -36,7 +36,5 @@ pub fn run() {
             sum += l*r;
         }
     }
-
     println!("{}",sum);
-
 }
