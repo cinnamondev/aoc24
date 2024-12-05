@@ -27,10 +27,10 @@ pub fn run() {
     let mut grid = vec![vec!['.'; n_chars_line]; n_lines];
     for i in 0..matrix.len() {
         for j in 0..matrix[i].len() {
-            let mut word: String;
+            let mut word = String::with_capacity(4);
             // traverse node horizontal (right)
             if (j+3 < matrix[i].len()) {
-                word = (&matrix[i][j..=j+3]).iter().collect();
+                word = (matrix[i][j..=j+3]).iter().collect();
                 if (word == "XMAS" || word == "SAMX") {
                     location_list.push((i,j,DIRECTION::HORIZONTAL, word == "XMAS"));
                     let mut iterator = word.chars();
@@ -41,7 +41,7 @@ pub fn run() {
             }
             // traverse node vertical (down)
             if (i+3 < matrix.len()) {
-                word = String::new();
+                word = String::with_capacity(4);
                 for k in i..=i+3 {
                     word.push(matrix[k][j]);
                 }
@@ -56,7 +56,7 @@ pub fn run() {
 
             // traverse diagonal (d+r)
             if ((i+3 < matrix.len()) && (j+3 < matrix[i].len())) {
-                word = String::new();
+                word = String::with_capacity(4);
                 for k in 0..=3 {
                     word.push(matrix[i+k][j+k]);
                 }

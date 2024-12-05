@@ -4,6 +4,7 @@ use day::day1;
 use day::day2;
 use day::day3;
 use day::day4;
+use day::day5;
 
 fn main() {
     println!("output day 1");
@@ -17,6 +18,9 @@ fn main() {
 
     println!("day44444");
     day4::run();
+    
+    println!("day5");
+    day5::run();
     
     println!("Hello, world!");
 }
