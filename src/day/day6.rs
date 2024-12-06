@@ -195,13 +195,13 @@ pub fn run(animate:bool) {
                             failed = false; break;
                         }
                     }
+                    if (animate) {
+                        clear();
+                        println!("{}", play_grid_to_string(maze, &cursor));
+                        //sleep(Duration::from_millis(2));
+                    }
                     cursor.turn_clockwise_90();
                 }
-            }
-            if (animate) {
-                clear();
-                println!("{}", play_grid_to_string(maze, &cursor));
-                //sleep(Duration::from_millis(2));
             }
 
             if (!failed) {
