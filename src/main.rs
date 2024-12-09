@@ -1,30 +1,40 @@
 mod day;
 
-use day::day1;
-use day::day2;
-use day::day3;
-use day::day4;
-use day::day5;
-use day::day6;
+use day::*;
 
 fn main() {
-    println!("output day 1");
-    day1::run();
+    //println!("output day 1");
+    //day1::run();
 
-    println!("output day2");
-    day2::run();
+    //println!("output day2");
+    //day2::run();
 
-    println!("output day3");
-    day3::run();
+    //println!("output day3");
+    //day3::run();
 
-    println!("day44444");
-    day4::run();
-    
-    println!("day5");
-    day5::run();
+    //println!("day44444");
+    //day4::run();
+    //
+    //println!("day5");
+    //day5::run();
 
-    println!("day6");
-    day6::run(false);
+    //println!("day6");
+    //day6::run(false);
 
-    println!("Hello, world!");
+    //println!("day7");
+    //day7::run();
+
+    //println!("day8");
+    //day8::run();
+
+    println!("day9");
+    day9::run();
+
+
+    let a: i32 = -91;
+    let b: i32 = 82;
+
+    a.abs_diff(b);
+    println!("day9");
+    day91::run();
 }

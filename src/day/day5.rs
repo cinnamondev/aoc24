@@ -31,7 +31,7 @@ pub fn run() {
         .filter(|update| !update_list_is_correct(update, &precedence_list))
         .map(|report| { // sort list return midpoint
             let mut sorted: Vec<u32> = Vec::new();
-            for page in report {
+            for page in report {;
                 let mut insert_at_end = true;
                 if let Some(disallows) = precedence_list.get(&page) {
                     // now we need to ensure the sorted list doesnt contain anything it needs to be followed by
