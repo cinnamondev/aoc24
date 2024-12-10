@@ -29,12 +29,4 @@ fn main() {
 
     println!("day9");
     day9::run();
-
-
-    let a: i32 = -91;
-    let b: i32 = 82;
-
-    a.abs_diff(b);
-    println!("day9");
-    day91::run();
 }
