@@ -27,6 +27,9 @@ fn main() {
     //println!("day8");
     //day8::run();
 
-    println!("day9");
-    day9::run();
+    //println!("day9");
+    //day9::run();
+
+    println!("day10");
+    day10::run();
 }

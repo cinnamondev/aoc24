@@ -179,9 +179,8 @@ fn checksum(linear_fs: &Vec<Block>) -> u64 {
         .map(|block| {
             block_pos += block.quantity;
             if let BlockType::File(id) = block.typ {
-                let r =((block_pos-block.quantity)..block_pos)
-                    .fold(0,|l,r| l+r) as u64 * id as u64;
-                r
+                ((block_pos-block.quantity)..block_pos)
+                    .fold(0,|l,r| l+r) as u64 * id as u64
             } else {
                 0
             }
