@@ -30,6 +30,9 @@ fn main() {
     //println!("day9");
     //day9::run();
 
-    println!("day10");
-    day10::run();
+    //println!("day10");
+    //day10::run();
+
+    println!("Day11");
+    day11::run();
 }
